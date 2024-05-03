@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentiment Analysis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .container {
+      text-align: center;
+    }
+    
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    .input-box {
+      width: 300px;
+      height: 40px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-sizing: border-box; /* Added to include padding and border in the width */
+    }
+    
+    .analysis-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 20px; /* Added to create space between the button and the label */
+    }
+    
+    .analysis-result {
+      color: #333;
+      font-size: 18px;
+    }
+    
+    .label-type {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Sentiment Analysis</h1>
+  <form id="sentimentForm" method="post" action="/">
+    <input type="text" name="text" id="textInput" class="input-box" placeholder="Enter text for analysis">
+    <br> <!-- Added for spacing -->
+    <button type="submit" class="analysis-btn">Analyze</button>
+    <br> <!-- Added for spacing -->
+    <label for="type"  class="label-type"> {{ result }} <span id="result"></span></label>
+  </form>
+</div>
+
+</body>
+</html>
